@@ -1,0 +1,44 @@
+sudo apt-get install liblivemedia-dev libv4l-dev cmake
+
+
+sudo apt-get install libv4l-dev 
+
+sudo apt-get install cmake
+
+V4l2Device.cpp:186 Cannot set pixelformat to:H264 format is:YUYV
+
+sudo h264_v4l2_rtspserver/h264_v4l2_rtspserver -F 25 -W 640 -H 480 -P 8555 /dev/video0
+
+
+
+sudo apt-get install gstreamer-tools 
+sudo apt-get install gstreamer0.10-plugins-base 
+sudo apt-get install gstreamer0.10-plugins-good 
+sudo apt-get install gstreamer0.10-plugins-bad
+sudo apt-get install gstreamer0.10-plugins-ugly
+
+
+sudo apt-get install build-essential 
+libjpeg-dev imagemagick subversion libv4l-dev
+
+
+mjpg_streamer -i "input_uvc.so -d /dev/video0" -o "output_http.so -p 8080 -w /usr/local/www"
+mjpg_streamer -i "input_uvc.so -d /dev/video0 -y -n -f 60 -r XGA" -o "output_http.so -p 8080 -w /usr/local/www"
+mjpg_streamer -i "input_uvc.so -d /dev/video0 -y -n -f 60 -r 320x240" -o "output_http.so -p 8080 -w /usr/local/www"
+mjpg_streamer -i "input_uvc.so -d /dev/video0 -y -n -f 60 -r 320x240 -q 60" -o "output_http.so -p 8080 -w /usr/local/www"
+mjpg_streamer -i "input_uvc.so -d /dev/video0 -y -n -f 60 -r CGA -q 40" -o "output_http.so -p 8080 -w /usr/local/www"
+mjpg_streamer -i "input_uvc.so -d /dev/video0 -y -n -f 60 -r 800x480 -q 40" -o "output_http.so -p 8080 -w /usr/local/www"
+mjpg_streamer -i "input_uvc.so -d /dev/video0 -y -n -f 40 -r 320x176 -q 80" -o "output_http.so -p 8080 -w /usr/local/www"
+
+
+
+
+
+
+
+
+./mjpg_streamer -i "./input_uvc.so -n -f 15 -r 640x480" -o "./output_http.so -n -w ./www"
+
+./mjpg_streamer -i "./input_uvc.so -n -f 15 -r XGA" -o "./output_http.so -n -w ./www"
+
+
